@@ -1,0 +1,148 @@
+body{
+    margin: 0%;
+    padding: 0%;
+}
+.report{
+    background-color: rgba(255, 255, 255, 0.696); 
+    border-radius: 30px;
+    padding: 10px;
+    position: absolute;  
+    top: 20%;            
+    left: 8%;           
+    z-index: 10;         
+    width: 80%;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-left: 15px;
+}
+
+.tablee {
+    margin: 20px auto; 
+    background-color: rgba(100, 139, 255, 0.367);
+    border-radius: 30px;
+    padding: 20px;  
+    width: 90%;  
+}
+
+table {
+    width: 100%;  
+    border-collapse: collapse; 
+}
+
+th, td {
+    text-align: center; 
+    padding: 15px;  
+    border-bottom: 2px solid black; 
+}
+
+th {
+    background-color: rgba(70, 144, 255, 0.5); 
+    color: black; 
+    border-top: 2px solid black;
+}
+#attsearch{
+    width: 300px;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin-left: 15px;
+    margin-top: 15px;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container{
+    background-image: url("bgjob.png");
+    background-size: 100%;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items:center ;
+    justify-content:center;
+    position: relative;
+}
+
+.logo{
+
+    width:180px;
+    margin-top: -575px;
+  
+}
+nav {
+    margin-top: -590px;
+    width: 80%; 
+    height: 70px;
+    background: #fff;
+    border-radius: 40px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    box-shadow: 0 15px 20px -10px rgba(0, 0, 0, 0.2); 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 13px 35px;
+    margin: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    color:#777;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: color 0.5s;
+}
+nav ul li::after{
+    content: '';
+    background:#4557f4;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    opacity: 0;
+    transition: top 0.5s ,opacity 0.5s;
+
+}
+nav ul li:hover{
+    color: #fff;
+}
+nav ul li:hover::after{
+    top: 50%;
+    opacity: 1;
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    padding-left: 15px;
+    color: rgb(21, 94, 178);
+    text-shadow: 0px 3px 2px rgb(122, 161, 206);
+    text-align: center;
+  }
+
+  

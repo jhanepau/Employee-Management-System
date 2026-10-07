@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up Form</title>
+  <link rel="stylesheet" href="signup.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <img src="1_nexatech.png" alt="">
+  <div class="signup">
+    <form action="signup.php" method="post">
+      <h1>Sign Up</h1>
+
+      <div class="form">
+      <div class="left">
+      <div class="input-box">
+        <input type="text" name="first_name" placeholder="First Name" required>
+        <i class='bx bxs-user'></i>
+      </div>
+
+      <div class="input-box">
+        <input type="text" name="last_name" placeholder="Last Name" required>
+        <i class='bx bxs-user'></i>
+      </div>
+
+      <div class="date-wrapper">
+        <input type="date" name="birthday" placeholder="Birthday" required>
+      </div>
+
+      <div class="input-box">
+        <input type="email" name="email" placeholder="Email" required>
+        <i class='bx bxs-envelope'></i>
+      </div>
+
+      <div class="input-box">
+        <input type="password" name="password" placeholder="Password" required>
+        <i class='bx bxs-lock-alt'></i>
+      </div>
+
+      <div class="input-box">
+        <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+        <i class='bx bxs-lock-alt'></i>
+      </div>
+      </div>
+
+      <div class="right"> 
+      <div class="employee-select-box">
+        <select name="employee_type">
+          <option value="" disabled selected>Select Employee Type</option>
+          <option value="Full-Time">Full-Time</option>
+          <option value="Part-Time">Part-Time</option>
+          <option value="Intern">Intern</option>
+          <option value="Contractor">Contractor</option>
+        </select>
+        <i class='bx bxs-briefcase'></i>
+      </div>
+
+      <div class="employee-select-box">
+        <select name="department">
+          <option value="" disabled selected>Select Department</option>
+          <option value="Accounting Department">Accounting Department</option>
+          <option value="HR Department">HR Department</option>
+          <option value="IT Department">IT Department</option>
+        </select>
+        <i class='bx bxs-briefcase'></i>
+      </div>
+      
+      <div class="employee-select-box">
+        <select name="job">
+          <option value="" disabled selected>Select Job</option>
+
+          <optgroup label="Accounting Department">
+            <option value="Junior Accountant">Junior Accountant</option>
+            <option value="Financial Analyst">Financial Analyst</option>
+            <option value="Payroll Coordinator">Payroll Coordinator</option>
+            <option value="Billing Specialist">Billing Specialist</option>
+            <option value="Budget Analyst">Budget Analyst</option>
+          </optgroup>
+
+          <optgroup label="HR Department">
+            <option value="HR Generalist">HR Generalist</option>
+            <option value="Recruitment Specialist">Recruitment Specialist</option>
+            <option value="Employee Relations Officer">Employee Relations Officer</option>
+            <option value="Training Coordinator">Training Coordinator</option>
+            <option value="HR Assistant">HR Assistant</option>
+          </optgroup>
+
+          <optgroup label="IT Department">
+            <option value="Software Developer">Software Developer</option>
+            <option value="UI/UX Designer">UI/UX Designer</option>
+            <option value="IT Support Specialist">IT Support Specialist</option>
+            <option value="DevOps Engineer">DevOps Engineer</option>
+            <option value="Cybersecurity Analyst">Cybersecurity Analyst</option>
+          </optgroup>
+
+        </select>
+        <i class='bx bxs-briefcase'></i>
+      </div>
+      
+      <button type="submit" class="btn">Sign Up</button>
+
+      <div class="login-link">
+        <p>Already have an account? <a href="login.html">Login</a></p>
+      </div>
+      </div>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

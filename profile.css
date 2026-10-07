@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: sans-serif;
+}
+
+.container{
+    background-image: url(bghome.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items:center ;
+    justify-content:center;
+    position: relative;
+}
+
+.logo{
+
+    width:180px;
+    margin-top: -575px;
+  
+}
+nav {
+    margin-top: -590px;
+    width: 80%; 
+    height: 70px;
+    background: #fff;
+    border-radius: 40px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    box-shadow: 0 15px 20px -10px rgba(0, 0, 0, 0.2); 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 13px 35px;
+    margin: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    color:#777;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: color 0.5s;
+}
+nav ul li::after{
+    content: '';
+    background:#4557f4;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    opacity: 0;
+    transition: top 0.5s ,opacity 0.5s;
+
+}
+nav ul li:hover{
+    color: #fff;
+}
+nav ul li:hover::after{
+    top: 50%;
+    opacity: 1;
+}
+
+.wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width:80%;
+    height: 65vh;
+    display: flex;
+    box-shadow: 0 1px 20px 0 rgba(34, 168, 231, 0.08);
+}
+.wrapper .left{
+    width: 35%;
+    background:linear-gradient(to left,#019a9c,#df7401);
+    padding:30px 25px;
+    border-top-left-radius:5px;
+    border-bottom-left-radius:5px;
+    text-align: center;
+    color:#fff;
+
+}
+.wrapper .left img{
+    width: 35vh;
+    height: 35vh;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.wrapper .left h4{
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+.wrapper .left p{
+   font-size: 20px;
+}
+
+.wrapper .right{
+    width: 65%;
+    background: #fff;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding:30px 25px;
+}
+.wrapper .right .info{
+    margin-bottom: 25px;
+}
+.wrapper .right  h3
+{
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e0e0e0;
+    color: darkblue;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.wrapper .right .info h4{
+    color: rgba(128, 128, 128, 0.801);
+    padding-bottom: 15px;
+    
+}
+

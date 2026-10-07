@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENU ADMIN</title>
+    <link rel="stylesheet" href="homeMenuEMP.css">
+</head>
+<body>
+  <div class="container" > 
+    <img src="1_nexatech.png"  class="logo">
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li><a href="help.html">Help</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="profile.php">Profile</a></li>
+            <li>Exit</li>
+
+        </ul>
+    </nav>
+  </div>
+  
+  <div id="dash">
+    <div id="banner_admin">
+        <h1>Welcome back, Employee!</h1>
+    </div>
+
+        <div id="time">
+            <h2 id="current-time">00:00:00</h2>
+            <p>Current Time</p>
+        </div>
+    </div>
+</div>
+
+    <div id="dash_1">
+    
+    <a href="attendance.php">
+        <div class="card_container">
+            <img src="attendance-icon.png" class="attendance-icon">
+            <p class="icon">Attendance</p>
+        </div>
+    </a>
+   
+    <a href="leaveemployee.php">
+        <div class="card_container">
+            <img src="eleave.png" class="eleave-icon">
+            <p id="iconeleave">Leave</p>
+        </div>
+    </a>
+
+    <a href="projectemp.php">
+        <div class="card_container">
+            <img src="eleave.png" class="eleave-icon">
+            <p id="iconeleave">Project</p>
+        </div>
+    </a>
+
+    </div>
+
+    <div id="dash_2">
+        
+    <a href="payrollemp.php">
+        <div class="card_container">
+            <img src="eproj.png" class="proj-icon">
+            <p id="iconproj">Payroll</p>
+        </div>
+    </a>
+
+    <a href="resign-request.php">
+        <div class="card_container">
+            <img src="epay.png" class="epay-icon">
+            <p id="iconepay">Resign</p>
+        </div>
+    </a>
+
+    </div>
+
+<script>
+    function updateTime() {
+        const now = new Date();
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const seconds = String(now.getSeconds()).padStart(2, '0');
+        
+        document.getElementById("current-time").textContent = `${hours}:${minutes}:${seconds}`;
+    }
+
+    setInterval(updateTime, 1000);
+    updateTime();
+
+</script>
+
+<div class="calendar">
+    <div class="header">
+        <h1 id="monthYear"></h1>
+    </div>
+    <div class="days">
+        <div class="day">Sun</div>
+        <div class="day">Mon</div>
+        <div class="day">Tue</div>
+        <div class="day">Wed</div>
+        <div class="day">Thu</div>
+        <div class="day">Fri</div>
+        <div class="day">Sat</div>
+    </div>
+    <div class="dates" id="dates"></div>
+</div>
+
+<script>
+    const monthYearElement = document.getElementById('monthYear');
+    const datesElement = document.getElementById('dates');
+
+    const currentDate = new Date();
+    const month = currentDate.getMonth(); // 0-11
+    const year = currentDate.getFullYear();
+
+    // Set the month and year in the header
+    monthYearElement.textContent = currentDate.toLocaleString('default', { month: 'long', year: 'numeric' });
+
+    // Calculate the first day of the month and the number of days in the month
+    const firstDay = new Date(year, month, 1).getDay();
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+    // Create empty divs for the days before the first day of the month
+    for (let i = 0; i < firstDay; i++) {
+        const emptyDiv = document.createElement('div');
+        emptyDiv.classList.add('date');
+        datesElement.appendChild(emptyDiv);
+    }
+
+    // Create divs for each day of the month
+    for (let day = 1; day <= daysInMonth; day++) {
+        const dateDiv = document.createElement('div');
+        dateDiv.classList.add('date');
+        dateDiv.textContent = day;
+
+        // Highlight the current day
+        if (day === currentDate.getDate() && month === currentDate.getMonth() && year === currentDate.getFullYear()) {
+            dateDiv.classList.add('current-day');
+        }
+
+        datesElement.appendChild(dateDiv);
+    }
+</script>
+
+</body>
+</html>

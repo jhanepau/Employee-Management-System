@@ -1,0 +1,223 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.container{
+  background-image: url("bgdep.png");
+  background-size: 100%;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items:center ;
+  justify-content:center;
+  position: relative;
+}
+
+.logo{
+
+  width:180px;
+  margin-top: -575px;
+
+}
+nav {
+  margin-top: -590px;
+  width: 80%; 
+  height: 70px;
+  background: #fff;
+  border-radius: 40px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  box-shadow: 0 15px 20px -10px rgba(0, 0, 0, 0.2); 
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 0;
+}
+nav ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 13px 35px;
+  margin: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color:#777;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  transition: color 0.5s;
+}
+nav ul li::after{
+  content: '';
+  background:#4557f4;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: -1;
+  opacity: 0;
+  transition: top 0.5s ,opacity 0.5s;
+
+}
+nav ul li:hover{
+  color: #fff;
+}
+nav ul li:hover::after{
+  top: 50%;
+  opacity: 1;
+}
+
+body{
+  margin: 0%;
+  padding: 0%;
+}
+
+  #cards {
+  position: absolute; 
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20; 
+  display: flex; 
+  gap: 20px; 
+  }
+
+.card {
+    width: 190px;
+    background: white;
+    padding: 0.4em;
+    border-radius: 6px;
+    border: 2px solid #ccc; 
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); 
+    display: inline-block;
+
+  }
+  
+  .card-image1 {
+    background-image: url(acc.png);
+    background-size: 130%;
+    background-color: rgb(236, 236, 236);
+    width: 100%;
+    height: 130px;
+    border-radius: 6px 6px 0 0;
+    border-bottom: 2px solid #ccc; 
+  }  
+  
+  .card-image2 {
+    background-image: url(hr.png);
+    background-size: 130%;
+    background-color: rgb(236, 236, 236);
+    width: 100%;
+    height: 130px;
+    border-radius: 6px 6px 0 0;
+    border-bottom: 2px solid #ccc; 
+  }
+  
+  .card-image3 {
+    background-image: url(it.png);
+    background-size: 130%;
+    background-color: rgb(236, 236, 236);
+    width: 100%;
+    height: 130px;
+    border-radius: 6px 6px 0 0;
+    border-bottom: 2px solid #ccc; 
+  }
+
+  .heading {
+    font-weight: 600;
+    color: rgb(88, 87, 87);
+    padding: 7px;
+    border-top: 2px solid #ccc; 
+  }
+
+  .btn {
+    background-color: #3498db;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+    transform: translateX(5px); 
+}
+
+.report{
+  background-color: rgba(255, 255, 255, 0.696); 
+  border-radius: 30px;
+  padding: 10px;
+  position: absolute;  
+  top: 53%;            
+  left: 8%;           
+  z-index: 10;         
+  width: 80%;
+}
+
+#attsearch{
+    width: 300px;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin-left: 15px;
+    margin-top: 15px;
+
+}
+
+.table1 {
+    margin: 20px auto; 
+    background-color: rgba(100, 139, 255, 0.367);
+    border-radius: 30px;
+    padding: 20px;  
+    width: 90%;  
+}
+
+table {
+    width: 100%;  
+    border-collapse: collapse; 
+}
+
+th, td {
+    text-align: center; 
+    padding: 15px;  
+    border-bottom: 2px solid black; 
+}
+
+th {
+    background-color: rgba(70, 144, 255, 0.5); 
+    color: black; 
+    border-top: 2px solid black;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-left: 15px;
+}
+
+h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  padding-left: 15px;
+  color: rgb(21, 94, 178);
+  text-shadow: 0px 3px 2px rgb(122, 161, 206);
+  text-align: center;
+}

@@ -1,0 +1,146 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: rgb(225, 247, 255);
+}
+
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: url(background.png);
+    background-size: 100%;    
+    color: white;
+    padding: 20px;
+}
+
+h1 {
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+h3 {
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+input {
+    width: 60%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.knowledge-base {
+    margin-top: -3px;
+    padding: 30px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+footer {
+    margin-top: 40px;
+    background-image: url(background.png);    
+    color: white;
+    padding: 10px;
+    margin-bottom: 0;
+}
+
+.container{
+    background-image: url("bghome.png");
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    align-items:center ;
+    justify-content:center;
+    position: relative;
+}
+
+.logo{
+    width:180px;
+    margin-top: 15px;
+}
+
+nav {
+    width: 80%; 
+    height: 70px;
+    background: #fff;
+    border-radius: 40px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    box-shadow: 0 15px 20px -10px rgba(0, 0, 0, 0.2); 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 13px 35px;
+    margin: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    color:#777;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: color 0.5s;
+}
+nav ul li::after{
+    content: '';
+    background:#4557f4;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    opacity: 0;
+    transition: top 0.5s ,opacity 0.5s;
+
+}
+nav ul li:hover{
+    color: #fff;
+}
+nav ul li:hover::after{
+    top: 50%;
+    opacity: 1;
+}

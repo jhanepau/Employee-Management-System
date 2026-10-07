@@ -1,0 +1,368 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container{
+    background-image: url("bghome.png");
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items:center ;
+    justify-content:center;
+    position: relative;
+}
+
+.logo{
+
+    width:180px;
+    margin-top: -575px;
+  
+}
+nav {
+    margin-top: -590px;
+    width: 80%; 
+    height: 70px;
+    background: #fff;
+    border-radius: 40px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    box-shadow: 0 15px 20px -10px rgba(0, 0, 0, 0.2); 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 13px 35px;
+    margin: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    color:#777;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: color 0.5s;
+}
+nav ul li::after{
+    content: '';
+    background:#4557f4;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    opacity: 0;
+    transition: top 0.5s ,opacity 0.5s;
+
+}
+nav ul li:hover{
+    color: #fff;
+}
+nav ul li:hover::after{
+    top: 50%;
+    opacity: 1;
+}
+
+#dash {
+    display: flex;
+    gap: 20px;
+    top: 23%;  
+    left: 5%; 
+}
+
+#banner_admin {
+    width: 500px;
+    height: 100px;
+    border-radius: 30px;
+    border: 4px solid whitesmoke;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 15px 10px 65px;
+    color: rgb(249, 191, 82);
+    text-shadow: 5px 5px 5px darkgoldenrod;
+}
+
+#attend-time {
+    display: inline-flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#attendance, #time {
+    width: 200px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    border: 4px solid whitesmoke;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+h2 {
+    font-size: 32px;
+    color: darkorange;
+    margin: 0;
+    text-shadow: 3px 3px 3px gray;
+}
+
+p {
+    font-size: 16px;
+    color: rgb(87, 87, 87);
+    margin: 5px 0 0;
+}
+
+#dash_1 {
+    display: flex;
+    gap: 10px;
+    top: 43%;
+    left: 5%; 
+}
+
+#dash_2 {
+    display: flex;
+    gap: 10px;
+    top: 67%;
+    left: 5%;
+}
+
+.icon {
+    font-size: 16px;
+    color: white;
+    margin-left: 5px;
+}
+
+#icone{
+    font-size: 16px;
+    color: white;
+    margin-left: 0px;
+}
+
+#iconproj {
+    font-size: 16px;
+    color: white;
+    padding-left: 0px;
+}
+
+#iconattend {
+    font-size: 16px;
+    color: white;
+    margin-left: -20px;
+}
+
+#iconeleave {
+    font-size: 16px;
+    color: white;
+    margin-left: 25px;
+}
+
+#iconleave {
+    font-size: 16px;
+    color: white;
+    padding-left: 3px;
+}
+
+#iconpr {
+    font-size: 16px;
+    color: white;
+    padding-left: -30px;
+}
+
+#icondep {
+    font-size: 16px;
+    color: white;
+    padding-left: 5px;
+}
+
+#iconj {
+    font-size: 16px;
+    color: white;
+    padding-left: 30px;
+}
+
+#iconec {
+    font-size: 16px;
+    color: white;
+    padding-left: 15px;
+}
+
+#iconepay {
+    font-size: 16px;
+    color: white;
+    padding-left: 20px;
+}
+
+#iconaa {
+    font-size: 16px;
+    color: white;
+    padding-right: 60px;
+}
+
+.card_containeremp {
+    width: 180px;
+    height: 160px;
+    background-color: darkorange;
+    padding-top: 20px;
+    padding-left: 40px;
+    border-radius: 30px;
+    border: 4px solid whitesmoke;
+    display: inline-block;
+}
+
+.card_container {
+    width: 180px;
+    height: 160px;
+    background-color: darkblue;
+    padding-top: 20px;
+    padding-left: 40px;
+    border-radius: 30px;
+    border: 4px solid whitesmoke;
+    display: inline-block;
+}
+
+.eleave-icon {
+    width: 95px; 
+    height: 90px; 
+}
+
+.attendance-icon {
+    width: 95px; 
+    height: 90px; 
+}
+
+.employee-icon {
+    width: 95px; 
+    height: 90px;   
+}
+
+.project-icon {
+    width: 95px; 
+    height: 90px;   
+}
+
+.attendance-icon {
+    width: 95px; 
+    height: 90px; 
+}
+
+.leave-icon {
+    width: 95px; 
+    height: 90px; 
+}
+
+.payroll-icon {
+    width: 95px; 
+    height: 90px; 
+}
+
+.department-icon {
+    width: 95px; 
+    height: 90px; 
+}
+
+.job-icon {
+    width: 95px; 
+    height: 90px; 
+}
+
+.epay-icon {
+    width: 95px; 
+    height: 90px;  
+}
+
+.contract-icon {
+    width: 95px; 
+    height: 90px;  
+}
+
+.approve-icon {
+    width: 95px; 
+    height: 90px;  
+}
+
+#dash, #dash_1, #dash_2 {
+    position: absolute;
+}
+
+#body.calendar {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+   
+    align-items:center;
+    height: 500;
+    margin-top: 250px;
+}
+
+.calendar {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    margin-top: -570px;
+    margin-left: 1060px;
+    position: absolute; 
+}
+
+.header {
+    background: darkblue;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.days, .dates {
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(7 , 1fr);
+    
+}
+
+.day, .date {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+}
+
+.day {
+    background: #f0f0f0;
+    font-weight: bold;
+}
+
+.date {
+    background: #ffffff;
+    transition:  0.3s;
+}
+
+.date:hover {
+    background: #e0e0e0;
+    cursor: pointer;
+}
+
+.current-day {
+    background: darkblue;
+    color: white;
+    font-weight: bold;
+}
